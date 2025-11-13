@@ -2,7 +2,7 @@ import React from "react";
 
 function CTA() {
   return (
-    <section className="bg-red-600 text-white py-20">
+    <section className="bg-linear-to-r from-[#E50914] to-black text-white py-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-4xl mb-6">Ready to Get Started?</h2>
         <p className="text-xl mb-8 text-gray-200">

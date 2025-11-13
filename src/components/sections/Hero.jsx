@@ -1,6 +1,8 @@
+import { ArrowRight } from "lucide-react";
+
 export default function Hero() {
   return (
-    <section className="px-8 md:px-20 py-24 bg-[url('/assets/bg.jpg')] bg-cover bg-center h-screen">
+    <section className="px-8 md:px-20 py-24 bg-[url('/assets/bg.jpg')] bg-cover bg-center max-h-screen">
       <div className="max-w-3xl">
         <h1 className="text-4xl md:text-7xl font-bold leading-tight text-gray-900">
           Empowering
@@ -17,11 +19,12 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-wrap gap-4 mt-8">
-          <button className="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition-all">
-            Our Services
+          <button className="px-8 py-4 bg-[#E50914] text-white rounded-full hover:bg-[#B00710] transition-all hover:scale-105 flex items-center justify-center gap-2">
+            Explore Services
+            <ArrowRight size={20} />
           </button>
           <button className="border border-red-500 text-red-600 px-6 py-3 rounded-full hover:bg-red-50 transition-all">
-            Our Training
+            Browse Courses
           </button>
         </div>
       </div>

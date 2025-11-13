@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 const services = [
   {
     title: "Website Development",
@@ -23,14 +25,17 @@ const services = [
   },
 ];
 function Services() {
+  const navigate = useRouter();
   return (
-    <section className="bg-white py-20">
+    <section className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl text-black mb-4">
-            Our <span className="text-[#E50914]">Tech Services</span>
+        <div className="text-center mb-2">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            Our Tech Services
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+
+          <div className="w-20 h-1.5 bg-red-600 mx-auto mt-4 rounded"></div>
+          <p className="mt-6 text-lg text-gray-600">
             Comprehensive technology solutions tailored to your business needs
           </p>
         </div>
@@ -49,7 +54,10 @@ function Services() {
           ))}
         </div>
         <div className="text-center">
-          <button className="px-8 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition-colors inline-flex items-center gap-2">
+          <button
+            className="px-8 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition-colors inline-flex items-center gap-2"
+            onClick={() => navigate.push("/services")}
+          >
             View All Services
             <ArrowRight size={20} />
           </button>
